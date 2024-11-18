@@ -1,9 +1,17 @@
 {
   "item.modtest.megadiamond": "Mega Diamond",
 
+  "block.modtest.megadiamond_block":  "Mega Diamond Block",
+  "block.modtest.megadiamond_ore": "Mega Diamond Ore",
+  "block.modtest.kek": "KEK",
+
   "painting.modtest.bogosbinted.title": "Bogos Binted",
   "painting.modtest.bogosbinted.author": "KIT",
 
   "painting.modtest.bogosbintedsmall.title": "Bogos Binted Small",
-  "painting.modtest.bogosbintedsmall.author": "KIT"
+  "painting.modtest.bogosbintedsmall.author": "KIT",
+
+  "creativetab.modtest.items": "ModTest Items",
+  "creativetab.modtest.blocks": "ModTest Blocks"
+
 }

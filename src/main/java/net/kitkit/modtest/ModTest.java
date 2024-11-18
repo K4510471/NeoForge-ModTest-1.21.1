@@ -1,5 +1,7 @@
 package net.kitkit.modtest;
 
+import net.kitkit.modtest.block.ModBlocks;
+import net.kitkit.modtest.item.ModCreativeModeTabs;
 import net.kitkit.modtest.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -37,7 +39,10 @@ public class ModTest {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,9 +56,14 @@ public class ModTest {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.MEGADIAMOND);
-        }
+//        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+//            event.accept(ModItems.MEGADIAMOND);
+//        }
+//        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+//            event.accept(ModBlocks.MEGADIAMOND_BLOCK);
+//            event.accept(ModBlocks.MEGADIAMOND_ORE);
+//            event.accept(ModBlocks.KEK);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
