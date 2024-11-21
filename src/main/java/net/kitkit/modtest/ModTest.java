@@ -3,8 +3,6 @@ package net.kitkit.modtest;
 import net.kitkit.modtest.block.ModBlocks;
 import net.kitkit.modtest.item.ModCreativeModeTabs;
 import net.kitkit.modtest.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -56,20 +54,13 @@ public class ModTest {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-//        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-//            event.accept(ModItems.MEGADIAMOND);
-//        }
-//        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-//            event.accept(ModBlocks.MEGADIAMOND_BLOCK);
-//            event.accept(ModBlocks.MEGADIAMOND_ORE);
-//            event.accept(ModBlocks.KEK);
-//        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
+        LOGGER.info("ModTest onServerStartingEvent");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -77,7 +68,7 @@ public class ModTest {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            LOGGER.info("ModTest FMLClientSetupEvent");
         }
     }
 }

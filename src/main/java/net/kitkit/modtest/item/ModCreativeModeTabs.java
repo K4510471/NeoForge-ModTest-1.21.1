@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.modtest.items"))
                     .displayItems((itemDisplayParameters, output) -> {            //.displayItems((parameters, output) -> {
                         output.accept(ModItems.MEGADIAMOND);
+                        output.accept(ModItems.CHISEL);
                     }).build());
 
     public static final Supplier<CreativeModeTab> MODTEST_BLOCK_TAB = CREATIVE_MODE_TAB.register("modtest_blocks_tab",
