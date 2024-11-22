@@ -1,7 +1,6 @@
 package net.kitkit.modtest.block;
 
 import net.kitkit.modtest.ModTest;
-import net.kitkit.modtest.block.custom.FurnaceEntityBlock;
 import net.kitkit.modtest.block.custom.MegaFurnaceEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;

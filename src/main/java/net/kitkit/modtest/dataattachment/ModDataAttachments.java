@@ -13,10 +13,10 @@ public class ModDataAttachments {
     private static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.ATTACHMENT_TYPES, ModTest.MOD_ID);
 
     public static final Supplier<AttachmentType<Integer>> MANA = ATTACHMENT_TYPES.register("mana",
-            () -> AttachmentType.<Integer>builder(() -> 0).serialize(Codec.INT).build());
+            () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
 
     public static final Supplier<AttachmentType<Integer>> ENERGY = ATTACHMENT_TYPES.register("energy",
-            () -> AttachmentType.<Integer>builder(() -> 0).serialize(Codec.INT).build());
+            () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
 
     public static void register(IEventBus eventBus) {
         ATTACHMENT_TYPES.register(eventBus);

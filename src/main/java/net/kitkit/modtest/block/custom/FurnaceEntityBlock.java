@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 public class FurnaceEntityBlock extends Block implements EntityBlock {
 
@@ -16,7 +17,7 @@ public class FurnaceEntityBlock extends Block implements EntityBlock {
 
     // Return a new instance of our block entity here.
     @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
         return new MegaFurnaceEntity(pos, state);
     }
 }
