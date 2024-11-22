@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "modtest:block/magic_block"
+    }
+  }
+}

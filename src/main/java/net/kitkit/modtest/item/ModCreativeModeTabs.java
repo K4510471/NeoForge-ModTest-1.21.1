@@ -32,6 +32,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MEGADIAMOND_BLOCK);
                         output.accept(ModBlocks.MEGADIAMOND_ORE);
                         output.accept(ModBlocks.KEK);
+                        output.accept(ModBlocks.MAGIC_BLOCK);
+                        output.accept(ModBlocks.FURNACE_ENTITY);
                     }).build());
 
     public static void register(IEventBus eventBus) {

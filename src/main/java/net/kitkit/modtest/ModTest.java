@@ -1,6 +1,9 @@
 package net.kitkit.modtest;
 
+import net.kitkit.modtest.block.ModBlockEntities;
 import net.kitkit.modtest.block.ModBlocks;
+import net.kitkit.modtest.component.ModDataComponents;
+import net.kitkit.modtest.dataattachment.ModDataAttachments;
 import net.kitkit.modtest.item.ModCreativeModeTabs;
 import net.kitkit.modtest.item.ModItems;
 import org.slf4j.Logger;
@@ -41,6 +44,10 @@ public class ModTest {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
+        ModDataAttachments.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
