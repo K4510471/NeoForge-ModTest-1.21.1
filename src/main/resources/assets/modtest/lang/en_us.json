@@ -15,6 +15,7 @@
   "painting.modtest.bogosbintedsmall.author": "KIT",
 
   "creativetab.modtest.items": "ModTest Items",
-  "creativetab.modtest.blocks": "ModTest Blocks"
+  "creativetab.modtest.blocks": "ModTest Blocks",
 
+  "container.modtest.megafurnaceentity": "Mega Furnace"
 }
