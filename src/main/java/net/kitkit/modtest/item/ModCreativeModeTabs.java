@@ -34,6 +34,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.KEK);
                         output.accept(ModBlocks.MAGIC_BLOCK);
                         output.accept(ModBlocks.FURNACE_ENTITY);
+                        output.accept(ModBlocks.MEGA_TNT);
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -2,6 +2,7 @@ package net.kitkit.modtest.block;
 
 import net.kitkit.modtest.ModTest;
 import net.kitkit.modtest.block.custom.MegaFurnaceEntity;
+import net.kitkit.modtest.block.custom.MegaTntEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -18,6 +19,13 @@ public class ModBlockEntities {
                     () -> BlockEntityType.Builder.of(
                         MegaFurnaceEntity::new,
                             ModBlocks.FURNACE_ENTITY.get()).build(null)
+                    );
+
+    public static final Supplier<BlockEntityType<MegaTntEntity>> MEGA_TNT =
+            BLOCK_ENTITIES.register("mega_tnt",
+                    () -> BlockEntityType.Builder.of(
+                        MegaTntEntity::new,
+                            ModBlocks.MEGA_TNT.get()).build(null)
                     );
 
     public static void register(IEventBus eventBus) {

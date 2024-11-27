@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "modtest:block/mega_tnt_block"
+    }
+  }
+}

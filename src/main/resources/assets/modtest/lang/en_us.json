@@ -7,6 +7,7 @@
   "block.modtest.kek": "KEK",
   "block.modtest.magic_block": "Magic Block",
   "block.modtest.furnace_entity_block": "Furnace Entity Block",
+  "block.modtest.mega_tnt_block": "Mega TNT Block",
 
   "painting.modtest.bogosbinted.title": "Bogos Binted",
   "painting.modtest.bogosbinted.author": "KIT",
@@ -17,5 +18,6 @@
   "creativetab.modtest.items": "ModTest Items",
   "creativetab.modtest.blocks": "ModTest Blocks",
 
-  "container.modtest.megafurnaceentity": "Mega Furnace"
+  "container.modtest.mega_furnace_entity": "Mega Furnace",
+  "container.modtest.mega_tnt_entity": "Mega TNT"
 }

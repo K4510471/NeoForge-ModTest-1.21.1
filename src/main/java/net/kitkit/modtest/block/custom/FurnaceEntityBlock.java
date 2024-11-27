@@ -46,34 +46,35 @@ public class FurnaceEntityBlock extends Block implements EntityBlock {
     @Override
     protected @NotNull InteractionResult useWithoutItem(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull BlockHitResult hitResult) {
 
-        if (level.getBlockEntity(pos) instanceof Container container) {
-            if (level.getBlockEntity(pos) instanceof MegaFurnaceEntity megaFurnaceEntity) {
-                if (player.getMainHandItem() != ItemStack.EMPTY) {
+        if ((level.getBlockEntity(pos) instanceof Container container) && (level.getBlockEntity(pos) instanceof MegaFurnaceEntity megaFurnaceEntity)) {
+            if (player.getMainHandItem() != ItemStack.EMPTY) {
 
-                    if (container.getItem(0) != ItemStack.EMPTY) {
-                        ItemStack itemFrom = container.getItem(0);
-                        container.setItem(0, player.getMainHandItem());
-                        player.setItemInHand(InteractionHand.MAIN_HAND, itemFrom);
-
-                    } else {
-                        container.setItem(0, player.getMainHandItem());
-                        player.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
-                    }
-
-                    megaFurnaceEntity.getUpdatePacket();
-                    level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+                if (container.getItem(0) != ItemStack.EMPTY) {
+                    ItemStack itemFrom = container.getItem(0);
+                    container.setItem(0, player.getMainHandItem());
+                    player.setItemInHand(InteractionHand.MAIN_HAND, itemFrom);
 
                 } else {
-
-                    if (container.getItem(0) != ItemStack.EMPTY) {
-                        player.setItemInHand(InteractionHand.MAIN_HAND, container.getItem(0));
-                        container.setItem(0, ItemStack.EMPTY);
-                        megaFurnaceEntity.getUpdatePacket();
-                        level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                    }
-
+                    container.setItem(0, player.getMainHandItem());
+                    player.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
                 }
+
+                megaFurnaceEntity.getUpdatePacket();
+                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
             }
+
+            else {
+
+                if (container.getItem(0) != ItemStack.EMPTY) {
+                    player.setItemInHand(InteractionHand.MAIN_HAND, container.getItem(0));
+                    container.setItem(0, ItemStack.EMPTY);
+                    megaFurnaceEntity.getUpdatePacket();
+                    level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+                }
+
+            }
+
         }
         return InteractionResult.SUCCESS;
     }

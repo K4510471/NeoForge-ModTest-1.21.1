@@ -3,6 +3,7 @@ package net.kitkit.modtest.block;
 import net.kitkit.modtest.ModTest;
 import net.kitkit.modtest.block.custom.FurnaceEntityBlock;
 import net.kitkit.modtest.block.custom.MagicBlock;
+import net.kitkit.modtest.block.custom.MegaTntEntityBlock;
 import net.kitkit.modtest.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -34,7 +35,10 @@ public class ModBlocks {
             () -> new MagicBlock(BlockBehaviour.Properties.of()));
 
     public static final DeferredBlock<FurnaceEntityBlock> FURNACE_ENTITY = registerBlock("furnace_entity_block",
-            () -> new FurnaceEntityBlock(BlockBehaviour.Properties.of()));
+            () -> new FurnaceEntityBlock(BlockBehaviour.Properties.of().strength(1.0F)));
+
+    public static final DeferredBlock<MegaTntEntityBlock> MEGA_TNT = registerBlock("mega_tnt_block",
+            () -> new MegaTntEntityBlock(BlockBehaviour.Properties.of().strength(1.0F)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
